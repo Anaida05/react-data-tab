@@ -1,10 +1,15 @@
 import React from 'react'
 import "./App.css";
-import MyTable from './MyTable';
+import MyTable from './components/MyTable';
+import { Route, Routes } from 'react-router-dom';
+import FetchingData from './components/FetchingData';
 const App = () => {
   return (
     <div>
-      <MyTable/>
+      <Routes>
+        <Route path='/' element={<MyTable/>}/>
+        <Route path='/fetch' element={<FetchingData/>}/>
+      </Routes>
     </div>
   )
 }
